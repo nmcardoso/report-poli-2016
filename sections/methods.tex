@@ -1,0 +1,58 @@
+\section*{Materiais e Métodos}
+\subsection*{Escolha da plataforma de desenvolvimento}
+Primeiramente foi feito o estudo do estado da arte das tecnologias utilizadas em coleta de observações da natureza feitas por voluntários \cite{azavea2014, azavea2015}. Com isso, foi possível fazer um levantamento das melhores plataformas existentes hoje. A finalidade deste levantamento foi basear a implementação deste projeto em um já existente e, a partir dele, fazer modificações e otimizações para que atenda às necessidades locais. 
+
+Algumas das plataformas analisadas foram: iNaturalist\footnote{Desenvolvido pela Academia de Ciências da Califórnia. http://inaturalist.org.}, Map of Life\footnote{Desenvolvido pela Universidade Yale. http://mol.org.} e eBird\footnote{Desenvolvido pela Universidade Cornell. http://ebird.org.}. O iNaturalist foi escolhido como plataforma de desenvolvimento. A escolha foi feita analizando critérios como frequência de atualização de código, uso de software livre, sistema de controle de qualidade de dados utilizado e quantidade de mídias suportadas, como website e aplicativos móveis.
+
+\subsection*{Análise da plataforma escolhida}
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{lll}
+    \toprule
+    \textbf{Nome} & \textbf{Back-End} & \textbf{Android} \\
+    \midrule
+    Linguagem de Programação  & Ruby                & Java \\
+    Framework                 & Ruby on Rails       & Android SDK \\
+    Arquitetura de Software   & MVC, RESTful (API)  & RESTful (API) \\
+    Formato do payload da API & JSON                & JSON \\
+    Servidor HTTP             & Apache              & - \\
+    Banco de dados            & PostgreSQL          & SQLite \\
+    \bottomrule
+  \end{tabular}
+  
+  \caption{Especificações do back-end e do aplicativo Android.}
+  \label{tab:back-end-espec}
+\end{table}
+
+\subsection*{Configuração do servidor de produção}
+
+\subsection*{Ciclo de desenvolvimento}
+
+
+% O iNaturalist utiliza a linguagem de programação Ruby e a framework Ruby on Rails na programação de seu servidor. O MVC – Model-View-Controller – é a arquitetura de projeto adotada e é padrão para o Ruby on Rails.
+
+% Esta arquitetura tem como objetivo desacoplar a interface gráfica da navegação e do comportamento da aplicação. O MVC é formado por três componentes principais, sendo eles:
+% • Modelo (Model): contém o conteúdo e a lógica de processamento específicos da aplicação, incluindo objetos de persistência e dados externos de informação;
+% • Visão (View): contém todas as funções específicas da interface gráfica e permite a apresentação de todo conteúdo e da lógica.
+% • Controlador (Controller): gera o acesso ao Modelo e à Visão e coordena o fluxo de dados entre eles. \cite{junior2016}
+
+
+% A figura 1 representa  a arquitetura MVC com os principais componentes e pode ser interpretada como: o Usuário tem acesso aos dados pela Visão, a interação do usuário com a interface é processada pelo Controlador, que manipula o Modelo. Assim que o Modelo tem seu estado alterado, este informa à Visão sobre seu novo estado.
+
+% Além do servidor, o iNaturalist conta com aplicativos para smartphones nas plataformas Android e iOS. Apenas a plataforma Android foi selecionada para este projeto, ele é programado na liguagem usual para aplicativos desta plataforma, Java.
+
+% A comunicação entre o aplicativo Android e o servidor segue a arquitetura RESTful (Representational State Transfer) com o protocolo de transferência de dados HTTP (Hypertext Transfer Protocol). Com isso, é possível fazer todas as operações (inclusão, deleção e alteração) no banco de dados pelo aplicativo.
+
+% Os dados enviado e recebidos são formatados em JSON (JavaScript Object Notation).
+
+% Para melhorar a experiência do usuário local com o versão brasileira do iNaturalist, a primeira modificação foi uma tradução completa do aplicativo Android para o português, contando com mais de 200 expressões traduzidas.
+
+% Pensando no gosto do brasileiro por jogos e na estratégia de marketing de gamificacação, que consiste em atribuir ao aplicativo elementos presentes em jogos, como recompensas, foi implementada uma nova função na plataforma iNaturalist que é a recompensa pelas ações dos usuários na rede por um sistema de 'badges'. Cada observação do usuário no iNaturalist contribui para que ele ganhe um novo badge. (Adicionar foto)
+
+
+• Tradução completa do app para pt-br (possível pull request)
+
+• Implementação de 'badges'
+
+• Árvore taxonômica

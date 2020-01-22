@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage[style=numeric,sorting=none,backend=biber]{biblatex}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage[margin=.2cm]{caption}
+\usepackage{extsizes}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric,
+    decorations.pathreplacing,decorations.pathmorphing,shapes,
+    matrix,shapes.symbols}
+
+\addbibresource{refs.bib}
+
+\setlength{\parindent}{2.5em}
+\setlength{\parskip}{.75em}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadalign{bc}
+
+\begin{document}
+\onehalfspacing
+%% FRONT-PAGE
+\input{sections/front-page.tex}
+
+%% SECTION
+\input{sections/introduction.tex}
+\input{sections/objectives.tex}
+\input{sections/methods.tex}
+\input{sections/results.tex}
+\input{sections/discussions.tex}
+\input{sections/conclusion.tex}
+
+%% REFERENCES
+\printbibliography
+\end{document}
